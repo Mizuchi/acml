@@ -4,6 +4,15 @@
 #include<boost/lexical_cast.hpp>
 
 namespace acml {
+
+template<class T>
+std::string print(const T &value) {
+    return boost::lexical_cast<std::string>(value);
+}
+
+}
+
+namespace acml {
 namespace xml {
 namespace detail {
 using std::string;
@@ -17,7 +26,7 @@ struct visitor {
 
 template<class T>
 void print(string &result, const T &value, bool_<false>) {
-    result += boost::lexical_cast<string>(value);
+    result += ::acml::print(value);
 }
 
 template<class T>
@@ -26,7 +35,7 @@ void print(string &result, const T &value, bool_<true>) {
 }
 
 template<class T>
-void visitor::operator()(const T& value, const string &name) const {
+void visitor::operator()(const T &value, const string &name) const {
     result += "<" + name + ">";
     print(result, value, bool_<Reflector<T>::defined>());
     result += "</" + name + ">";
