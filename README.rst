@@ -1,10 +1,15 @@
+#####
+ACML
+#####
+:Author: Tianjiao Yin <ytj000@gmail.com>
+
 Intro
 =====
 
 ACML is a C++ json/xml dumper/serialization library.
-It required C++ Boost Library, and less than 100 lines now. 
+It required C++ Boost Library.
 
-BTW, ACML means "A C++ to Mark Library".
+BTW, ACML means "Another C++ to Markup Language".
 
 Quick Start
 ============
@@ -19,7 +24,6 @@ In the beginning::
             name(n), height(h), weight(w) {}
     };
 
-    // ACML_REGISTER must in the global scope
     ACML_REGISTER(Person, (name)(height)(weight))
 
 And later::

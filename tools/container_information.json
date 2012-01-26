@@ -1,0 +1,80 @@
+[
+    {
+        "directory": "cpp", 
+        "include": "vector", 
+        "name": "std::vector", 
+        "template_parameters_length": 2
+    }, 
+    {
+        "directory": "cpp", 
+        "include": "deque", 
+        "name": "std::deque", 
+        "template_parameters_length": 2
+    }, 
+    {
+        "directory": "cpp", 
+        "include": "list", 
+        "name": "std::list", 
+        "template_parameters_length": 2
+    }, 
+    {
+        "directory": "cpp", 
+        "include": "set", 
+        "name": "std::set", 
+        "template_parameters_length": 3
+    }, 
+    {
+        "directory": "cpp", 
+        "include": "set", 
+        "name": "std::multiset", 
+        "template_parameters_length": 3
+    }, 
+    {
+        "directory": "cpp", 
+        "include": "map", 
+        "name": "std::map", 
+        "template_parameters_length": 4
+    }, 
+    {
+        "directory": "cpp", 
+        "include": "map", 
+        "name": "std::multimap", 
+        "template_parameters_length": 4
+    }, 
+    {
+        "directory": "cpp11", 
+        "include": "array", 
+        "name": "std::array", 
+        "template_parameters_length": 2
+    }, 
+    {
+        "directory": "cpp11", 
+        "include": "forward_list", 
+        "name": "std::forward_list", 
+        "template_parameters_length": 2
+    }, 
+    {
+        "directory": "cpp11", 
+        "include": "unordered_set", 
+        "name": "std::unordered_set", 
+        "template_parameters_length": 5
+    }, 
+    {
+        "directory": "cpp11", 
+        "include": "unordered_multiset", 
+        "name": "std::unordered_multiset", 
+        "template_parameters_length": 5
+    }, 
+    {
+        "directory": "cpp11", 
+        "include": "unordered_map", 
+        "name": "std::unordered_map", 
+        "template_parameters_length": 5
+    }, 
+    {
+        "directory": "cpp11", 
+        "include": "unordered_multimap", 
+        "name": "std::unordered_multimap", 
+        "template_parameters_length": 5
+    }
+]

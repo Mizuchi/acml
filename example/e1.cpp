@@ -1,5 +1,4 @@
 #include"../include/acml/json.hpp"
-// #include<acml/json.hpp>
 #include<iostream>
 
 struct Person {
@@ -10,8 +9,14 @@ struct Person {
         name(n), height(h), weight(w) {}
 };
 
+// ACML_REGISTER must in the global scope
+// ACML_REGISTER(
+//    ClassName, 
+//    (BaseClassName1)(BaseClassName2)... ,
+//    (MemberName1)(MemberName2)...
+//    )
 
-ACML_REGISTER(Person, (name)(height)(weight))
+ACML_REGISTER(Person, , (name)(height)(weight))
 
 int main() {
     Person noumi("Kudryavka Anatolyevna Strugatskaya", 1.45, 39);
