@@ -6,10 +6,10 @@ ACML
 Intro
 =====
 
-ACML is a C++ json/xml dumper/serialization library.
+ACML is a C++ xml/json dump/serialization library.
 It required C++ Boost Library.
 
-BTW, ACML means "Another C++ to Markup Language".
+BTW, ACML means "Another C++ struct to Markup Language library".
 
 Quick Start
 ============
@@ -24,7 +24,7 @@ In the beginning::
             name(n), height(h), weight(w) {}
     };
 
-    ACML_REGISTER(Person, (name)(height)(weight))
+    ACML_REGISTER(Person, ,(name)(height)(weight))
 
 And later::
 
@@ -39,3 +39,10 @@ The output is::
         "height": "1.45",
         "weight": "39"
     }
+
+For Arch Linux Users
+====================
+
+Use ``yaourt -S libacml-git`` to install it.
+Examples are placed in ``/usr/share/doc/acml``.
+
