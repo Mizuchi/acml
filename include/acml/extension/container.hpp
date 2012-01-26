@@ -1,5 +1,5 @@
-#ifndef __ACML_HPP__CONT__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_20120126
-#define __ACML_HPP__CONT__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_20120126
+#ifndef __ACML_HPP__CONTAINER__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_
+#define __ACML_HPP__CONTAINER__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_
 #include"../acml.hpp"
 #include<boost/lexical_cast.hpp>
 #include<boost/foreach.hpp>
@@ -15,4 +15,4 @@
 #include<utility>
 ACML_REGISTER_TEMPLATE(std::pair, 2, , (first)(second))
 
-#endif /* __ACML_HPP__CONT__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_20120126 */
+#endif /* __ACML_HPP__CONTAINER__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_ */

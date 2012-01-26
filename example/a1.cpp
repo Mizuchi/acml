@@ -1,3 +1,4 @@
+// Just "g++ a1.cpp"
 #include"../include/acml/json.hpp"
 #include<iostream>
 
@@ -16,9 +17,11 @@ struct Person {
 //    (MemberName1)(MemberName2)...
 //    )
 
-ACML_REGISTER(Person, , (name)(height)(weight))
+ACML_REGISTER(Person, /* No base class, leave it empty */, (name)(height)(weight))
 
 int main() {
     Person noumi("Kudryavka Anatolyevna Strugatskaya", 1.45, 39);
     std::cout << acml::json::dumps(noumi) << std::endl;
 }
+
+#include"../include/acml/extension/notation/sci_float.hpp" // anywhere in the compile unit
