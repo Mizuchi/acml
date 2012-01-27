@@ -1,4 +1,4 @@
-#include"../include/acml/json.hpp"
+#include"../include/acml/xml.hpp"
 
 template<class T1, class T2, class T3>
 struct Data {
@@ -13,9 +13,9 @@ int main () {
     using namespace std;
 
     Data<string, double, int> data;
-    data.t1 = "hello world";
+    data.t1 = "hello<world";
     data.t2 = 1.23;
     data.t3 = 200240;
 
-    cout << acml::json::dumps(data) << endl;
+    cout << acml::xml::dumps(data) << endl;
 }

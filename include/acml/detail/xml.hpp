@@ -8,6 +8,31 @@ namespace xml {
 namespace detail {
 using std::string;
 
+string escape(const string &s) {
+    string ret;
+    for (size_t i = 0; i < s.size(); ++i)
+        switch (s[i]) {
+            case '<':
+                ret += "&lt;";
+                break;
+            case '>':
+                ret += "&gt;";
+                break;
+            case '&':
+                ret += "&amp;";
+                break;
+            case '\'':
+                ret += "&apos;";
+                break;
+            case '"':
+                ret += "&quot;";
+                break;
+            default:
+                ret += s[i];
+        }
+    return ret;
+}
+
 struct visitor {
     string &result;
     template<class T>
@@ -17,7 +42,7 @@ struct visitor {
 
 template<class T>
 void print(string &result, const T &value, bool_<false>) {
-    result += ::acml::print(value);
+    result += escape(::acml::print(value));
 }
 
 template<class T>
