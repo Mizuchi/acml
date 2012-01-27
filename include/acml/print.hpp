@@ -9,6 +9,6 @@ template<class T> std::string print(const T &);
     namespace acml {                                          \
     template<> std::string print<>(const TYPE &);             \
     } /* namespace acml */                                    \
-    template<> std::string acml::print<>(const TYPE &VALUE)
+    template<> inline std::string acml::print<>(const TYPE &VALUE)
 
 #endif /* __ACML_HPP_printfwd_AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_ */
