@@ -8,7 +8,12 @@ namespace acml {
 template<bool b> struct bool_ {};
 template<class T> struct Reflector {
     static const bool defined = false;
-}; } /* namespace acml */
+}; 
+template<class Value, class Visitor>
+void for_each(const Value& value, const Visitor& visitor) {
+    Reflector<Value>::for_each(value, visitor);
+}
+} /* namespace acml */
 
 #define ACML_REGISTER_VISIT_BASE(UNUSED1, UNUSED2, Base) \
     for_each(Base(value), visitor);

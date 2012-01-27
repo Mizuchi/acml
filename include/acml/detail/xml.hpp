@@ -22,7 +22,7 @@ void print(string &result, const T &value, bool_<false>) {
 
 template<class T>
 void print(string &result, const T &value, bool_<true>) {
-    Reflector<T>::for_each(value, visitor(result));
+    for_each(value, visitor(result));
 }
 
 template<class T>
