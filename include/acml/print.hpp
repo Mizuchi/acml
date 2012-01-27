@@ -11,4 +11,9 @@ template<class T> std::string print(const T &);
     } /* namespace acml */                                    \
     template<> inline std::string acml::print<>(const TYPE &VALUE)
 
+#define ACML_PRINT_TYPENAME(TYPE)    \
+    ACML_PRINT_HANDLE(TYPE, VALUE) { \
+        return #TYPE;                \
+    }
+
 #endif /* __ACML_HPP_printfwd_AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_ */
