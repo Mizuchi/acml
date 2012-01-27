@@ -28,24 +28,24 @@ template<class T> struct Reflector {
         typedef TYPE Value;                                                 \
         static const bool defined = true;                                   \
         template<class Visitor>                                             \
-        static void for_each(const Value&, const Visitor&);                  \
+        static void for_each(const Value&, const Visitor&);                 \
     }; } /* namespace acml */                                               \
     template<class Visitor>                                                 \
-    void acml::Reflector<TYPE>::for_each(                                   \
+    void ::acml::Reflector<TYPE>::for_each(                                 \
             const Value &VALUE, const Visitor &VISITOR)
 
 #define ACML_REGISTER_TEMPLATE_HANDLE(TYPE, LENGTH, VISITOR, VALUE)         \
     namespace acml {                                                        \
     template<BOOST_PP_ENUM_PARAMS(LENGTH, class T)>                         \
-    struct Reflector< TYPE<BOOST_PP_ENUM_PARAMS(LENGTH, T)> > {       \
-        typedef TYPE<BOOST_PP_ENUM_PARAMS(LENGTH, T)> Value;          \
+    struct Reflector< TYPE<BOOST_PP_ENUM_PARAMS(LENGTH, T)> > {             \
+        typedef TYPE<BOOST_PP_ENUM_PARAMS(LENGTH, T)> Value;                \
         static const bool defined = true;                                   \
         template<class Visitor>                                             \
-        static void for_each(const Value&, const Visitor&);                  \
+        static void for_each(const Value&, const Visitor&);                 \
     }; } /* namespace acml */                                               \
     template<BOOST_PP_ENUM_PARAMS(LENGTH, class T)>                         \
     template<class Visitor>                                                 \
-    void acml::Reflector<TYPE<BOOST_PP_ENUM_PARAMS(LENGTH, T)> >::    \
+    void ::acml::Reflector<TYPE<BOOST_PP_ENUM_PARAMS(LENGTH, T)> >::        \
          for_each(const Value &VALUE, const Visitor &VISITOR)
 
 #define ACML_REGISTER(TYPE, INHERITS, MEMBERS)                              \
