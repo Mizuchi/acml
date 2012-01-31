@@ -32,6 +32,7 @@ void for_each(const Value& value, const Visitor& visitor) {
     template<> struct Reflector<TYPE> {                                     \
         typedef TYPE Value;                                                 \
         static const bool defined = true;                                   \
+        static const char* type_name() { return #TYPE; }                    \
         template<class Visitor>                                             \
         static void for_each(const Value&, const Visitor&);                 \
     }; } /* namespace acml */                                               \

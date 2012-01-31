@@ -1,6 +1,7 @@
 #ifndef __ACML_HPP_boost_variant__AUTHOR__YTJ__YTJ000_AT_GMAIL_
 #define __ACML_HPP_boost_variant__AUTHOR__YTJ__YTJ000_AT_GMAIL_
 #include"../container.hpp"
+#include"../../type_name.hpp"
 #include<boost/variant.hpp>
 #include<boost/typeof/typeof.hpp>
 namespace acml {
@@ -10,7 +11,7 @@ namespace acml {
         const Visitor& visitor;
         template<class T>
             void operator()(const T& value) const {
-                visitor(value, "variant");
+                visitor(value, "variant: " + type_name(value));
             }
         boost_variant_visitor(const Visitor& visitor): visitor(visitor) {}
     };
