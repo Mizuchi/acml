@@ -11,7 +11,7 @@ namespace acml {
         const Visitor& visitor;
         template<class T>
             void operator()(const T& value) const {
-                visitor(value, "variant: " + type_name(value));
+                visitor(value, "variant(" + type_name(value) + ")");
             }
         boost_variant_visitor(const Visitor& visitor): visitor(visitor) {}
     };
