@@ -11,8 +11,10 @@ struct boost_variant_visitor : public boost::static_visitor<> {
     const Visitor &visitor;
     template<class T>
     void operator()(const T &value) const {
-        visitor(type_name(value), "type");
-        visitor(value, "value");
+#if ACML_DISPLAY_TYPENAME
+        visitor(type_name(value), type_name_tag());
+#endif
+        visitor(value, "variant");
     }
     boost_variant_visitor(const Visitor &visitor): visitor(visitor) {}
 };

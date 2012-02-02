@@ -4,7 +4,18 @@
 #include<boost/preprocessor/seq/for_each.hpp>
 #include<boost/preprocessor/stringize.hpp>
 
+#ifndef ACML_DISPLAY_TYPENAME
+#define ACML_DISPLAY_TYPENAME true
+#endif
+
+#if ACML_DISPLAY_TYPENAME
+#include"type_name.hpp"
+#endif
+
 namespace acml {
+    const char * type_name_tag() {
+        return "type.name";
+    }
 template<bool b> struct bool_ {};
 template<class T> struct Reflector {
     static const bool defined = false;
@@ -21,11 +32,20 @@ void for_each(const Value& value, const Visitor& visitor) {
 #define ACML_REGISTER_VISIT_MEMBER(UNUSED1, UNUSED2, member) \
     visitor(value.member, BOOST_PP_STRINGIZE(member));
 
+#if ACML_DISPLAY_TYPENAME
+#define ACML_REGISTER_FOR_EACH(TYPE, INHERITS, MEMBERS)                     \
+    {                                                                       \
+        visitor(type_name(value), type_name_tag());                         \
+        BOOST_PP_SEQ_FOR_EACH(ACML_REGISTER_VISIT_BASE, UNUSED, INHERITS)   \
+        BOOST_PP_SEQ_FOR_EACH(ACML_REGISTER_VISIT_MEMBER, UNUSED, MEMBERS)  \
+    }
+#else
 #define ACML_REGISTER_FOR_EACH(TYPE, INHERITS, MEMBERS)                     \
     {                                                                       \
         BOOST_PP_SEQ_FOR_EACH(ACML_REGISTER_VISIT_BASE, UNUSED, INHERITS)   \
         BOOST_PP_SEQ_FOR_EACH(ACML_REGISTER_VISIT_MEMBER, UNUSED, MEMBERS)  \
     }
+#endif
 
 #define ACML_REGISTER_HANDLE(TYPE, VISITOR, VALUE)                          \
     namespace acml {                                                        \

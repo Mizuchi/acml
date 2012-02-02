@@ -86,6 +86,8 @@ inline string pretty_print(const char *s) {
     simplify(ast);
     string ret = print(ast);
     std::free((void *)s);
+    while (!ret.empty() && *ret.rbegin() == ' ')
+        ret.erase(ret.end() - 1);
     return ret;
 }
 } // namespace typeName
