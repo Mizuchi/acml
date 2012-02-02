@@ -1,6 +1,7 @@
 #ifndef __ACML_HPP__CONTAINER__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_
 #define __ACML_HPP__CONTAINER__AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_
 #include"../acml.hpp"
+#include"../type_name.hpp"
 #include<string>
 
 namespace acml {
@@ -9,7 +10,7 @@ namespace acml {
 
 #define ACML_REGISTER_CONTAINER(TYPE, LENGTH)                               \
     ACML_REGISTER_TEMPLATE_HANDLE(TYPE, LENGTH, visitor, value) {           \
-        visitor(#TYPE, "type");                                             \
+        visitor(type_name(value), "type");                                  \
         visitor(value.size(), "size");                                      \
         std::size_t n = 0;                                                  \
         typedef typename Value::const_iterator Iter;                        \

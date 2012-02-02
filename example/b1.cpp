@@ -1,13 +1,15 @@
 #include"../include/acml/extension/boost/variant.hpp"
-#include"../include/acml/extension/boost/optional.hpp"
+#include"../include/acml/extension/cpp/vector.hpp"
 #include"../include/acml/json.hpp"
 #include<string>
 #include<iostream>
 using namespace std;
 
-boost::optional< boost::variant<int, string, double> > s;
+std::vector<boost::variant<int, string, double> > s;
 
 int main() {
-    s = string("hello world");
+    s.push_back(string("hello world"));
+    s.push_back(int(10));
+    s.push_back(double(20));
     cout << acml::json::dumps(s) << endl;    
 }
