@@ -13,9 +13,9 @@
 #endif
 
 namespace acml {
-    const char * type_name_tag() {
-        return "type.name";
-    }
+inline const char * type_name_tag() {
+    return "type.name";
+}
 template<bool b> struct bool_ {};
 template<class T> struct Reflector {
     static const bool defined = false;
