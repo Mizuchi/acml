@@ -7,6 +7,9 @@
 #include<cxxabi.h>
 
 namespace acml {
+namespace typeName {
+    std::string pretty_print(const char *);
+}
 
 template<class T>
 struct TypeName {
@@ -23,6 +26,13 @@ std::string type_name(const T &) {
     return TypeName<T>().value();
 }
 
-}
+} // namespace acml
+
+#define ACML_TYPENAME_HANDLE(TYPE)                        \
+    namespace acml {                                      \
+    template<> struct TypeName<TYPE> {                    \
+        static std::string value();                       \
+    }; } /* namespace acml */                             \
+    inline std::string acml::TypeName<TYPE>::value()
 
 #endif /* __ACML_HPP_typename_AUTHOR__YTJ__YTJ000_AT_GMAIL_DOT_COM_ */
