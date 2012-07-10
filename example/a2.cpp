@@ -2,9 +2,9 @@
 // http://stackoverflow.com/questions/8220130/converting-c-class-to-json
 //
 
-#include"../include/acml/extension/cpp/vector.hpp"
-#include"../include/acml/extension/cpp/map.hpp"
-#include"../include/acml/json.hpp"
+#include<acml/extension/cpp/vector.hpp>
+#include<acml/extension/cpp/map.hpp>
+#include<acml/json.hpp>
 
 class Example {
         std::string string;

@@ -1,6 +1,6 @@
-#include"../include/acml/extension/boost/variant.hpp"
-#include"../include/acml/extension/cpp/map.hpp"
-#include"../include/acml/json.hpp"
+#include<acml/extension/boost/variant.hpp>
+#include<acml/extension/cpp/map.hpp>
+#include<acml/json.hpp>
 #include<string>
 #include<iostream>
 using namespace std;

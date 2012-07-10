@@ -1,5 +1,5 @@
 // Just "g++ a1.cpp"
-#include"../include/acml/json.hpp"
+#include<acml/json.hpp>
 #include<iostream>
 
 struct Person {

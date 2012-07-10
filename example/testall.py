@@ -7,8 +7,13 @@ from subprocess import call
 l = glob.glob("*.cpp")
 
 for i in l:
-    print("Testing " + i)
+    print("Compiling " + i)
     ret = call(["g++", i, "-o", "/tmp/ACMLTEST"])
-    assert ret == 0
-    ret = os.system("/tmp/ACMLTEST > /tmp/"+i)
-    assert ret == 0
+    if ret == 0:
+        print('Compile successfully. Run and output to /tmp/'+i[:-3]+'json')
+        ret = os.system("/tmp/ACMLTEST > /tmp/"+i[:-3] + 'json')
+        if ret == 0:
+            print("Finished " + i)
+            print("You can verify the output in /tmp/" + i[:-3] + 'json')
+        else:
+            print("Failed " + i)
