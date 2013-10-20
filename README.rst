@@ -6,8 +6,8 @@ ACML
 Intro
 =====
 
-ACML is a C++ xml/json dump/serialization library.
-It required C++ Boost Library.
+ACML is a header-only C++ xml/json dump/serialization library.
+It requires C++ Boost Library.
 
 BTW, ACML means "Another C++ struct to Markup Language library".
 
