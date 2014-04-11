@@ -3,6 +3,17 @@ ACML
 #####
 :Author: Tianjiao Yin <ytj000@gmail.com>
 
+Deprecated
+==========
+
+Warning: I am not going to maintain this project any more since no one use it. This repository will be deleted at October 1, 2014. Fork it if you still want to use this project or even take over it.
+Replacement:
+
+1. https://github.com/Loki-Astari/ThorsSerializer
+2. http://fossil.wanderinghorse.net/repos/nosjob/index.cgi/wiki?name=s11n
+3. https://code.google.com/p/cjson/
+
+
 Intro
 =====
 
