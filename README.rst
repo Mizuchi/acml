@@ -6,7 +6,7 @@ ACML
 Deprecated
 ==========
 
-Warning: I am not going to maintain this project any more since no one use it. This repository will be deleted after October 1, 2014. Fork it if you still want to use this project or even take over it.
+Warning: I am not going to maintain this project any more since no one use it. This repository will be deleted soon. Fork it if you still want to use this project or even take over it.
 
 Here are some replacements,
 
