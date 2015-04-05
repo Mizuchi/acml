@@ -10,9 +10,10 @@ Warning: I am not going to maintain this project any more since no one use it. T
 
 Here are some replacements,
 
-1. https://github.com/Loki-Astari/ThorsSerializer
-2. http://fossil.wanderinghorse.net/repos/nosjob/index.cgi/wiki?name=s11n
-3. https://code.google.com/p/cjson/
+1. http://uscilab.github.io/cereal/ (Recommended)
+2. https://github.com/Loki-Astari/ThorsSerializer
+3. http://fossil.wanderinghorse.net/repos/nosjob/index.cgi/wiki?name=s11n
+4. https://code.google.com/p/cjson/
 
 
 Intro
